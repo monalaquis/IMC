@@ -1,13 +1,6 @@
 body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-image: linear-gradient(
-    to right,
-    #462784,
-    #6f49a1,
-    #976dc0,
-    #bf92df,
-    #e7baff
-  );
+  background-image: radial-gradient(circle, #00c7fc, #00b9da, #00aab6, #009a92, #008970, #008263, #007b55, #007448, #00764c, #007851, #007a55, #007c59);
   background-color: #845ec2;
   text-align: center;
   color: #ffff;
@@ -19,23 +12,27 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-  background-color: #dcb0ff;
+  background-color: #002515;
   padding: 1em;
   border-radius: 10px;
 }
 
 button {
-  background-color: #462784;
+  background-color: #004f2e;
   border: none;
   padding: 1em;
   border-radius: 10px;
   box-sizing: 1px, 1px, 6px, black;
   cursor: pointer;
   color: aliceblue;
+  transition: 0.3s;
+  border: 1px solid #fff;
 }
 
 button:hover {
- 
+    color:#fff;
+    background-color: #004f2e;
+
 }
 
 .final-step,
@@ -53,7 +50,9 @@ input {
     font-size: 25px;
 }
 
-p{
-   color: #462784;
-   font-size: 20px;
+
+.erro{
+    display: none;
+   color: #cce2d9;
+   font-size: 15px;
 }

@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="style.css">
     
 </head>
-<body>
-        <h1>Calculadora de IMC</h1>
+
         <div class="container">
             <div class="first-step">
-                <p>Clique para iniciar o calcúlo do IMC</p>
-                <button onclick="go(1,2)">Iniciar</button>
+                <h1>Calculadora do IMC</h1>
+                <button onclick="go(1,2) ,limpar()">Iniciar</button>
             </div>
 
             <div class="second-step">
@@ -25,6 +24,7 @@
                 <label for="">Digite Sua Altura</label>
                 <input type="number" placeholder="Sua Altura" id="altura">
                 <br><br>
+                <p class="erro">Peso ou Altura Inválidos</p>
                 <button onclick="main(), limpar()">Calcular</button>
             </div>
 
@@ -32,7 +32,7 @@
                 <h3>Resultado</h3>
                 <p id="resultado"></p>
                 <button onclick="go(3,2), limpar()">Calcular Novamente</button>
-                <button onclick="go(3,1), limpar()">Finalizar</button>
+                <button onclick="go(3,1), limpar(), escondeErro()">Finalizar</button>
             </div>
 
             <script src="script.js"></script>

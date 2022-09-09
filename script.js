@@ -2,7 +2,6 @@ const firstDiv = document.querySelector(".first-step");
 const secondDiv = document.querySelector(".second-step");
 const finalDiv = document.querySelector(".final-step");
 
-
 function go(currentStep, nextStep) {
   let dNone, dBlock;
   if (currentStep == 1) {
@@ -26,7 +25,14 @@ function go(currentStep, nextStep) {
 
 const peso = document.getElementById("peso");
 const altura = document.getElementById("altura");
+const erros = document.querySelectorAll(".erro");
+function mostraErro() {
+  erros.forEach((erro) => erro.classList.remove("erro"));
+}
 
+function escondeErro() {
+  erros.forEach((erro) => erro.classList.add("eroo"));
+}
 
 function validate() {
   peso.style.border = "none";
@@ -40,8 +46,10 @@ function validate() {
     } else {
       altura.style.border = "1px solid red";
     }
+    mostraErro();
     return false;
   }
+  escondeErro();
   return true;
 }
 
@@ -74,7 +82,8 @@ function main() {
   if (validate()) classificaoIMC();
 }
 
-function limpar(){
- peso.value = " ";
- altura.value = " ";
+function limpar() {
+  peso.value = " ";
+  altura.value = " ";
+  escondeErro ();
 }
