@@ -25,14 +25,14 @@
                 <label for="">Digite Sua Altura</label>
                 <input type="number" placeholder="Sua Altura" id="altura">
                 <br><br>
-                <button onclick="validate()">Calcular</button>
+                <button onclick="main(), limpar()">Calcular</button>
             </div>
 
             <div class="final-step">
                 <h3>Resultado</h3>
-                <p id="resultado">...</p>
-                <button>Calcular Novamente</button>
-                <button>Finalizar</button>
+                <p id="resultado"></p>
+                <button onclick="go(3,2), limpar()">Calcular Novamente</button>
+                <button onclick="go(3,1), limpar()">Finalizar</button>
             </div>
 
             <script src="script.js"></script>

@@ -1,44 +1,59 @@
-body{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-image: linear-gradient(to right, #462784, #6f49a1, #976dc0, #bf92df, #e7baff);
-    background-color: #845EC2;
-    text-align: center;
-    color: #ffff;
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-image: linear-gradient(
+    to right,
+    #462784,
+    #6f49a1,
+    #976dc0,
+    #bf92df,
+    #e7baff
+  );
+  background-color: #845ec2;
+  text-align: center;
+  color: #ffff;
 }
 
-.container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width:50% ;
-    background-color:#DCB0FF;
-    padding: 1em;
-    border-radius: 10px;
-    
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background-color: #dcb0ff;
+  padding: 1em;
+  border-radius: 10px;
 }
 
-button{
-    background-color: #462784;
-    border: none;
-    padding: 1em;
-    border-radius: 10px;
-    box-sizing: 1px, 1px, 6px, black;
-    cursor: pointer;
+button {
+  background-color: #462784;
+  border: none;
+  padding: 1em;
+  border-radius: 10px;
+  box-sizing: 1px, 1px, 6px, black;
+  cursor: pointer;
+  color: aliceblue;
 }
 
-button:hover{
-    background-color: #251433;
+button:hover {
+ 
 }
 
-.final-step, .second-step{
-    display: none;
+.final-step,
+.second-step {
+  display: none;
 }
 
-input{
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
+input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+#resultado {
+    font-size: 25px;
 }
 
+p{
+   color: #462784;
+   font-size: 20px;
+}

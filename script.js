@@ -2,6 +2,7 @@ const firstDiv = document.querySelector(".first-step");
 const secondDiv = document.querySelector(".second-step");
 const finalDiv = document.querySelector(".final-step");
 
+
 function go(currentStep, nextStep) {
   let dNone, dBlock;
   if (currentStep == 1) {
@@ -23,35 +24,57 @@ function go(currentStep, nextStep) {
   dBlock.style.display = "block";
 }
 
+const peso = document.getElementById("peso");
+const altura = document.getElementById("altura");
+
+
 function validate() {
-  const peso = document.getElementById("peso");
-  const altura = document.getElementById("altura");
-  peso.style.border = 'none';
-  altura.style.border = 'none';
+  peso.style.border = "none";
+  altura.style.border = "none";
   if (!peso.value || !altura.value) {
     if (!peso.value && !altura.value) {
-      peso.style.border = '1px solid red';
-      altura.style.border = '1px solid red';
+      peso.style.border = "1px solid red";
+      altura.style.border = "1px solid red";
     } else if (!peso.value) {
-      peso.style.border = '1px solid red';
+      peso.style.border = "1px solid red";
     } else {
-      altura.style.border = '1px solid red';
+      altura.style.border = "1px solid red";
     }
-  } else {
-    let imc = peso.value / (altura.value * altura.value);
-    const result = document.getElementById('resultado');
-    if (imc < 18.5) {
-      result.innerHTML = "Magreza ! Obesidade 0";
-    } else if (imc >= 18.5 && imc <= 24.9) {
-      result.innerHTML = "Normal | Obesidade 0";
-    } else if (imc >= 25 && imc <= 29.9) {
-      result.innerHTML = "Sobrepeso ! Obesidade I";
-    } else if (imc >= 30 && imc <= 39.9) {
-      result.innerHTML = "Obesidade | Obesidade II";
-    } else {
-      result.innerHTML = "Obesidade Grave | Obesidade III";
-    }
-    go(2, 3);
+    return false;
   }
+  return true;
+}
 
+const result = document.getElementById("resultado");
+
+function classificaoIMC() {
+  let imc = peso.value / (altura.value * altura.value);
+  result.innerHTML = `Seu IMC é ${imc.toFixed(2)} <br>`;
+
+  if (imc < 18.5) {
+    result.innerHTML += "Magreza | Grau de Obesidade 0";
+    result.style.color = "yellow";
+  } else if (imc >= 18.5 && imc <= 25) {
+    result.innerHTML += "Normal |Grau de Obesidade 0";
+    result.style.color = "green";
+  } else if (imc >= 25 && imc < 30) {
+    result.innerHTML += "Sobrepeso | Grau de  Obesidade I";
+    result.style.color = "yellow";
+  } else if (imc >= 30 && imc < 40) {
+    result.innerHTML += "Obesidade | Grau de Obesidade II";
+    result.style.color = "red";
+  } else {
+    result.innerHTML += "Obesidade Grave |Grau de  Obesidade III";
+    result.style.color = "black";
+  }
+  go(2, 3);
+}
+
+function main() {
+  if (validate()) classificaoIMC();
+}
+
+function limpar(){
+ peso.value = " ";
+ altura.value = " ";
 }
