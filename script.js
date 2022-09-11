@@ -31,7 +31,7 @@ function mostraErro() {
 }
 
 function escondeErro() {
-  erros.forEach((erro) => erro.classList.add("eroo"));
+  erros.forEach((erro) => erro.classList.add("erro"));
 }
 
 function validate() {

@@ -52,7 +52,8 @@ input {
 
 
 .erro{
-    display: none;
+
+   display: none;
    color: #cce2d9;
-   font-size: 15px;
+   font-size: 10px;
 }
